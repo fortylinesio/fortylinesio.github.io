@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+
+.cover {
+  max-width: 2000px;
+  margin: 0 auto;
+  background-image: -webkit-linear-gradient(-80deg, transparent 50%, #F5ECE7 50%);
+
+  & > .container {
+    position: relative;
+
+    .social-icons {
+      position: absolute;
+      bottom: 16px;
+      right: -80px;
+      flex-direction: column;
+
+      & > .icon {
+        background-color: #999999;
+        
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+        
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1115px ) {
+  .cover {
+    max-width: 2000px;
+    margin: 0 auto;
+    background-image: -webkit-linear-gradient(-80deg, transparent 50%, #F5ECE7 50%);
+  
+    & > .container {
+    
+      .social-icons {
+        right: -30px;
+          
+        & > .icon {
+                    
+          &:not(:last-child) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import '../../variables.scss';
+
+.footer {
+  padding: 0;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  background-color: #F3F3F3;
+
+  blockquote {
+    font-family: 'Special Elite', cursive;
+    font-weight: 100;
+    font-size: 24px;
+    font-style: italic;
+    max-width: 500px;
+    line-height: 1.4;
+    position: relative;
+    margin: 0;
+  }
+  
+  blockquote:before,
+  blockquote:after {
+    position: absolute;
+    color: #ccc;
+    font-size: 64px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  blockquote:before {
+    content: '“';
+    left: -40px;
+    top: -12px;
+  }
+  
+  blockquote:after {
+    content: '”';
+    right: -24px;
+    bottom: 12px;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    
+    .item {
+      background-color: #fcfcfc;
+      color: black;
+      padding: 16px;
+
+      &:first-child {
+        padding-left: 32px;
+      }
+
+      &:last-child {
+        padding-right: 32px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      color: grey;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 8px;
+    }
+    
+    & > *:not(:last-child)::after {
+      content: '|';
+      margin-left: 8px;
+    }
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+
+    & > .icon {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .footer {
+    padding-top: 32px;
+    background-color: white;
+
+    blockquote {
+      margin: auto 24px;
+      max-width: 100%;
+    }
+    
+    .navigation {
+      flex-direction: column;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      
+      .item {
+        background-color: white;
+        padding: 8px 16px !important;
+      }
+    }
+
+    .social-icons {
+      position: relative;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .links {
+      flex-direction: column;
+      margin-bottom: 16px;
+      
+      & > *:not(:last-child) {
+        margin: 0;
+      }
+
+      & > *:not(:last-child)::after {
+        content: '';
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 960px) {
+  .footer {
+    blockquote {
+      margin: auto 24px;
+    }
+  }
+}
+
+

@@ -1,0 +1,12 @@
+
+export * from './navbar'
+export * from './illustration'
+export * from './cover'
+export * from './what-we-do'
+export * from './services'
+export * from './projects'
+export * from './team'
+export * from './contact'
+export * from './footer'
+export * from './social-icons'
+export * from './navigation-links'
